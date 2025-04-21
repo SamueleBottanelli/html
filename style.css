@@ -1,0 +1,23 @@
+*{
+    margin:0%;
+
+}
+.container
+{
+    display:grid;
+    border: 1px solid red;
+    grid-template-columns: 50% 50%;
+    margin: 20px auto;
+    height: 400px;
+    place-items: center;
+    
+}
+.upper_menu
+{
+    background-color: black;
+    width:100%;
+    position:fixed;
+    margin: 0px auto;
+    height: 80px;
+
+}
