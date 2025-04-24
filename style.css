@@ -33,13 +33,13 @@
 .blocco_immagine{position:relative;}
 .titolo
 {
-    bottom:600;
+    bottom:350;
     font-family:"Press Start 2P";
     font-size: 40px;
 }
 .sottotitolo
 {
-    bottom:500;
+    bottom:250;
     font-family: arial;
     width:500px;
     line-height: 1.25;
@@ -51,4 +51,20 @@
     left:50;
     color: white
 
+}
+
+.menu_scelta
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    margin:0px 20px 20px 20px;
+    border: 1px solid red;
+    max-width:1200ps;
+    height: 200px;
+
+}
+.linguaggio
+{
+    border: 1px solid green;
 }
