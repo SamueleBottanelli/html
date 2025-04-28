@@ -62,6 +62,7 @@
     border: 1px solid red;
     max-width:1200ps;
     height: 200px;
+    place-items: center;
 
 }
 .linguaggio
