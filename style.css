@@ -6,22 +6,23 @@
 .upper_menu
 {
     display: grid;
-    grid-template-columns: 9fr 2fr;
+    grid-template-columns: 7fr 2fr 2fr;
     width:100%;
     margin: 0px auto;
     height: 80px;
-    gap: 20px;
+    gap: 0px;
 
 }
 
-.chi_siamo{text-align: right;}
-.diventa_un_membro{text-align: right;  }
+.chi_siamo{text-align: center;}
+.diventa_un_membro{text-align: center;  }
 
 .chi_siamo,.diventa_un_membro
 {
-    padding: 27px 45px 0px 15px;
+    padding: 27px 45px 31px 15px;
     font-family: arial;
     text-decoration: none;
+    transition:all 0.5s ease-in-out;
 }
 
 .diventa_un_membro a,.chi_siamo a
@@ -30,7 +31,8 @@
     color:white;
     font-size: 20px;
 }
-
+.chi_siamo:hover{background: gray; transform: scale(1.1)}
+.diventa_un_membro:hover{background: gray; transform: scale(1.1)}
 .upper_menu,.chi_siamo,.diventa_un_membro{background-color: black;}
 
 
@@ -72,4 +74,6 @@
 .linguaggio
 {
     border: 1px solid green;
+    transition:all 0.3s ease-in-out
 }
+.linguaggio:hover{transform: scale(1.1);}
