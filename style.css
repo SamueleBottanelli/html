@@ -10,7 +10,7 @@
     width:100%;
     margin: 0px auto;
     height: 80px;
-    gap: 0px;
+    gap: 15px;
 
 }
 
@@ -19,7 +19,7 @@
 
 .chi_siamo,.diventa_un_membro
 {
-    padding: 27px 45px 31px 15px;
+    padding: 27px 31px 31px 15px;
     font-family: arial;
     text-decoration: none;
     transition:all 0.5s ease-in-out;
@@ -30,7 +30,8 @@
 {
     text-decoration:none;
     color:white;
-    font-size: 20px;
+    font-size:40px;
+    text-align: center;
 }
 .chi_siamo:hover{background: gray; transform: scale(1.1)}
 .diventa_un_membro:hover{background: gray; transform: scale(1.1)}
@@ -50,8 +51,11 @@
 .titolo
 {
     bottom:350;
-    font-family:"Press Start 2P";
     font-size: 40px;
+}
+.titolo,.sceglilinguaggio
+{
+    font-family:"Press Start 2P";
 }
 .sottotitolo
 {
@@ -74,8 +78,8 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 40px;
-    margin:0px 20px 20px 20px;
-    border: 1px solid red;
+    margin:0px 20px 0px 20px;
+    /*border: 1px solid red;*/
     max-width:1200ps;
     height: 250px;
     place-items: center;
@@ -83,7 +87,7 @@
 }
 .linguaggio
 {
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     transition:all 0.3s ease-in-out
 }
 .linguaggio:hover{transform: scale(1.1);}
