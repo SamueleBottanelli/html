@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylec++.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Algopedia: C++ algorithms</title>
+</head>
+<body>
+    <div class="container">
+        <div class="upper_menu">
+            <div class="homepage"><a href="main.html"><img src="homepage.jpg" alt="" class="homepage_icon"></a></div>
+            <div class="blocco_vuoto"></div>
+                
+                <a href="https://www.google.it/" style="text-decoration: none;">
+                    <div class="chi_siamo"><b>Chi siamo</b></div>
+                </a>
+                
+                <a href="https://www.google.it/" style="text-decoration: none;">
+                    <div class="diventa_un_membro"><b>Diventa un membro</b></div>
+                </a>
+        </div>
+    
+        <div class="sidebar">
+            <a href="#1"><p  class="primolink">| Ricerca lineare</p></a>
+            <a href="#2"><p>| Ricerca binaria</p></a>
+            <a href="#3"><p>| Bubble Sort</p></a>
+            <a href="#4"><p>| Selection Sort</p></a>
+            <a href="#5"><p>| Insertion Sort</p></a>
+            <a href="#6"><p>| Algoritmo di Euclide</p></a>
+        </div>
+        <div class="content">
+            <p class="primeparole" id="1">Qui troverai una lista di semplici algoritmi in C++, è possibile trovare algoritmi come <b>Bubble sort</b> e <b>Binary search</b> che sono alla base dello sviluppo di codice in c++. </p>
+            <h2>Ricerca lineare (Linear Search)</h2>
+           <div class="spiegazione"><pre><code>
+            int linearSearch(const std::vector<int>& arr, int target) {
+                for (int i = 0; i < arr.size(); ++i) {
+                    if (arr[i] == target) {
+                        return i; // indice trovato
+                    }
+                }
+                return -1; // non trovato
+            }</code></pre>
+            <p id="2"><b>Spiegazione</b>: Cerca un elemento in un array sequenziale confrontando ogni elemento con il valore cercato fino a trovare una corrispondenza o raggiungere la fine dell'array.</p></div>
+
+            <h2 >Ricerca binaria (Binary Search)</h2>
+            
+            <div class="spiegazione"><pre><code>
+            int binarySearch(const std::vector<int>& arr, int target) {
+                int left = 0, right = arr.size() - 1;
+                while (left <= right) {
+                    int mid = left + (right - left) / 2;
+                    if (arr[mid] == target)
+                        return mid;
+                    else if (arr[mid] < target)
+                        left = mid + 1;
+                    else
+                        right = mid - 1;
+                }
+                return -1;
+            }</code></pre>
+            <p id="3"><b>Spiegazione</b>: Ricerca un elemento in un array ordinato dividendo ripetutamente a metà l'intervallo di ricerca, confrontando il valore centrale con quello cercato.</p></div>
+
+            <h2 >Bubble Sort</h2>
+            
+            <div class="spiegazione"><pre><code>
+            void bubbleSort(std::vector<int>& arr) {
+                bool swapped;
+                do {
+                    swapped = false;
+                    for (size_t i = 0; i < arr.size() - 1; ++i) {
+                        if (arr[i] > arr[i + 1]) {
+                            std::swap(arr[i], arr[i + 1]);
+                            swapped = true;
+                        }
+                    }
+                } while (swapped);
+            }</code></pre>
+            <p id="4"><b>Spiegazione</b>: Algoritmo di ordinamento semplice che ripetutamente confronta e scambia coppie adiacenti di elementi se sono nell'ordine sbagliato, "gonfiando" gli elementi più grandi verso la fine dell'array.</p></div>
+
+            <h2 >Selection Sort</h2>
+            
+            <div class="spiegazione"><pre><code>
+            void selectionSort(std::vector<int>& arr) {
+                for (size_t i = 0; i < arr.size(); ++i) {
+                    size_t minIdx = i;
+                    for (size_t j = i + 1; j < arr.size(); ++j) {
+                        if (arr[j] < arr[minIdx])
+                            minIdx = j;
+                    }
+                    std::swap(arr[i], arr[minIdx]);
+                }
+            }</code></pre>
+            <p id="5"><b>Spiegazione</b>: Trova ripetutamente il minimo (o massimo) nell'array e lo scambia con l'elemento nella posizione corrente, costruendo l'array ordinato dall'inizio.</p></div>
+
+            <h2 >Insertion Sort</h2>
+            
+            <div class="spiegazione"><pre><code>
+            void insertionSort(std::vector<int>& arr) {
+                for (size_t i = 1; i < arr.size(); ++i) {
+                    int key = arr[i];
+                    int j = i - 1;
+                    while (j >= 0 && arr[j] > key) {
+                        arr[j + 1] = arr[j];
+                        --j;
+                    }
+                    arr[j + 1] = key;
+                }
+            }</code></pre>
+            <p id="6"><b>Spiegazione</b>: Costruisce l'array ordinato uno alla volta inserendo ogni elemento nella posizione corretta rispetto agli elementi già ordinati.</p></div>
+
+            <h2 >Algoritmo di Euclide (Massimo Comun Divisore - MCD)</h2>
+            
+            <div class="spiegazione"><pre><code>
+            int gcd(int a, int b) {
+                while (b != 0) {
+                    int temp = b;
+                    b = a % b;
+                    a = temp;
+                }
+                return a;
+            }</code></pre>
+            <p ><b>Spiegazione</b>: Calcola il massimo comun divisore di due numeri interi usando la divisione ripetuta.</p></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
