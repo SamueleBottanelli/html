@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylepy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Algopedia: python algorithms</title>
+</head>
+<body>
+    <div class="container">
+        <div class="upper_menu">
+            <div class="homepage"><a href="main.html"><img src="homepage.jpg" alt="" class="homepage_icon"></a></div>
+            <div class="blocco_vuoto"></div>
+                
+                <a href="https://www.google.it/" style="text-decoration: none;">
+                    <div class="chi_siamo"><b>Chi siamo</b></div>
+                </a>
+                
+                <a href="https://www.google.it/" style="text-decoration: none;">
+                    <div class="diventa_un_membro"><b>Diventa un membro</b></div>
+                </a>
+        </div>
+    
+        <div class="sidebar">
+            <a href="#1"><p  class="primolink">| Ricerca lineare</p></a>
+            <a href="#2"><p>| Ricerca binaria</p></a>
+            <a href="#3"><p>| Bubble Sort</p></a>
+            <a href="#4"><p>| Selection Sort</p></a>
+            <a href="#5"><p>| Dijkstra</p></a>
+            <a href="#6"><p>| Algoritmo di Euclide</p></a>
+        </div>
+        <div class="content">
+            <p class="primeparole" id="1">Qui troverai una lista di semplici algoritmi in python, nonostante questo linguaggio di programmazione disponga di numerose funzioni che semplificano molto la comprensibilità e la facilità del codice, ci sono casi in cui è necessario ricorrere a degli algoritmi scritti a mano. </p>
+            <h2>Ricerca lineare (Linear Search)</h2>
+           <div class="spiegazione"><pre><code>
+            def ricerca_lineare(lista, target):
+                for i, elemento in enumerate(lista):
+                    if elemento == target:
+                        return i
+                return -1  # elemento non trovato</code></pre>
+            <p id="2"><b>Spiegazione</b>: Cerca un elemento in un array sequenziale confrontando ogni elemento con il valore cercato fino a trovare una corrispondenza o raggiungere la fine dell'array.</p></div>
+
+            <h2 >Ricerca binaria (Binary Search)</h2>
+            
+            <div class="spiegazione"><pre><code>
+            def ricerca_binaria(lista, target):
+                basso, alto = 0, len(lista) - 1
+                while basso <= alto:
+                    medio = (basso + alto) // 2
+                    if lista[medio] == target:
+                        return medio
+                    elif lista[medio] < target:
+                        basso = medio + 1
+                    else:
+                        alto = medio - 1
+                return -1  # elemento non trovato</code></pre>
+            <p id="3"><b>Spiegazione</b>: Ricerca un elemento in un array ordinato dividendo ripetutamente a metà l'intervallo di ricerca, confrontando il valore centrale con quello cercato.</p></div>
+
+            <h2 >Bubble Sort</h2>
+            
+            <div class="spiegazione"><pre><code>
+            def bubble_sort(lista):
+                n = len(lista)
+                for i in range(n):
+                    for j in range(0, n - i - 1):
+                        if lista[j] > lista[j + 1]:
+                            lista[j], lista[j + 1] = lista[j + 1], lista[j]
+                return lista</code></pre>
+            <p id="4"><b>Spiegazione</b>: Algoritmo di ordinamento semplice che ripetutamente confronta e scambia coppie adiacenti di elementi se sono nell'ordine sbagliato, "gonfiando" gli elementi più grandi verso la fine dell'array.</p></div>
+
+            <h2 >Selection Sort</h2>
+            
+            <div class="spiegazione"><pre><code>
+            def selection_sort(lista):
+                n = len(lista)
+                for i in range(n):
+                    min_idx = i
+                    for j in range(i + 1, n):
+                        if lista[j] < lista[min_idx]:
+                            min_idx = j
+                    lista[i], lista[min_idx] = lista[min_idx], lista[i]
+                return lista</code></pre>
+            <p id="5"><b>Spiegazione</b>: Trova ripetutamente il minimo (o massimo) nell'array e lo scambia con l'elemento nella posizione corrente, costruendo l'array ordinato dall'inizio.</p></div>
+
+            <h2 >Dijkstra</h2>
+            
+            <div class="spiegazione"><pre><code>
+            import heapq
+            def dijkstra(graph, start):
+                distanze = {node: float('inf') for node in graph}
+                distanze[start] = 0
+                heap = [(0, start)]
+                while heap:
+                    current_distanza, nodo = heapq.heappop(heap)
+                    if current_distanza > distanze[nodo]:
+                        continue
+                    for neighbor, peso in graph[nodo].items():
+                        distanza = current_distanza + peso
+                        if distanza < distanze[neighbor]:
+                            distanze[neighbor] = distanza
+                            heapq.heappush(heap, (distanza, neighbor))
+                return distanze</code></pre>
+            <p id="6"><b>Spiegazione</b>: Trova il percorso più breve da un nodo sorgente a tutti gli altri in un grafo con pesi positivi. È più complesso, ma molto usato in reti e routing.</p></div>
+
+            <h2 >Algoritmo di Euclide (Massimo Comun Divisore - MCD)</h2>
+            
+            <div class="spiegazione"><pre><code>
+                def massimo_comune_divisore(a, b):
+                    while b:
+                        a, b = b, a % b
+                    return a</code></pre>
+            <p ><b>Spiegazione</b>: Calcola il massimo comun divisore di due numeri interi usando la divisione ripetuta.</p></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
