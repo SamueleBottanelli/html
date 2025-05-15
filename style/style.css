@@ -6,7 +6,7 @@
 .upper_menu
 {
     display: grid;
-    grid-template-columns: 7fr 2fr 2fr;
+    grid-template-columns: 9fr 2fr 2fr;
     width:100%;
     margin: 0px auto;
     height: 80px;
@@ -37,6 +37,13 @@
 .diventa_un_membro:hover{background: gray; transform: scale(1.1)}
 .upper_menu,.chi_siamo,.diventa_un_membro{background-color: black;}
 
+.homepage{padding: 20px 20px 20px 20px;}
+.homepage_icon
+{
+    max-width: 40px;
+    max-height: 40px;
+}
+
 .sfumatura
 {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.004), black);
@@ -51,8 +58,9 @@
 .blocco_immagine{position:relative;}
 .titolo
 {
-    bottom:350;
+    
     font-size: 40px;
+    top: 35%;
 }
 .titolo,.sceglilinguaggio
 {
@@ -60,15 +68,15 @@
 }
 .sottotitolo
 {
-    bottom:225;
     font-family: arial;
     width:500px;
     line-height: 1.25;
+    top: 50%;
+    padding-top:20px;
 }
 .titolo,.sottotitolo
 {
     position:absolute;
-    
     left:50;
     color: white
 
@@ -92,3 +100,38 @@
     transition:all 0.3s ease-in-out
 }
 .linguaggio:hover{transform: scale(1.1);}
+
+
+@media(max-width: 1042px)
+{
+    .titolo h1{font-size:50px;}
+    .sottotitolo p{font-size:15px;}
+    .linguaggio{width: 200px; height: 200px;}
+    .linguaggio img{width: 100%;height: 100%;}
+}
+
+@media(max-width: 590px)
+{
+    .titolo h1{font-size:25px;}
+    .sottotitolo p{font: size 10px;}
+     .linguaggio{width: 100px; height: 100px;}
+    .linguaggio img{width: 100%;height: 100%;}
+}
+
+@media(max-width: 567px)
+{
+    .titolo h1{font-size:25px;}
+    .sottotitolo p{font: size 10px;}
+     .linguaggio{width: 100px; height: 100px;}
+    .linguaggio img{width: 100%;height: 100%;}
+}
+
+
+@media(max-width: 567px)
+{
+    .titolo h1{font-size:25px;}
+    .sottotitolo p{font: size 10px;}
+     .linguaggio{width: 100px; height: 100;}
+    .linguaggio img{width: 100%;height: 100%;}
+}
+
