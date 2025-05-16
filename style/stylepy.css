@@ -102,3 +102,25 @@ pre
     margin-left: 20px;
     margin-bottom: 70px;
 }
+
+
+
+@media(max-width: 1136px)
+{
+    .chi_siamo,.diventa_un_membro{font-size: 14px; padding-bottom: 6px;}
+    .content p{font-size: 14px;}
+    .content h2{font-size: 20px}
+    .spiegazione{margin-bottom: 20px;}
+    .primeparole{padding-bottom: 20px;}
+    code{font-size: 14px;}
+}
+@media(max-width: 810px)
+{
+    .chi_siamo,.diventa_un_membro{font-size: 12px; padding-bottom: 6px;}
+    .content p{font-size: 10px;}
+    .content h2{font-size: 15px}
+    code{font-size: 10px;}
+    .sidebar{width: 170px;}
+    .sidebar p{font-size: 10px;}
+    .content{margin-left: 170px;}
+}
